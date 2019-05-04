@@ -3,6 +3,8 @@ import {NgModule} from '@angular/core';
 
 import {PagesComponent} from './pages.component';
 import {NotFoundComponent} from './miscellaneous/not-found/not-found.component';
+import {MemberComponent} from './member/member.component';
+
 
 const routes: Routes = [{
   path: '',
@@ -12,9 +14,13 @@ const routes: Routes = [{
     redirectTo: '',
     pathMatch: 'full',
   }, {
-    path: '**',
-    component: NotFoundComponent,
-  }],
+    path: 'test',
+    component: MemberComponent,
+  },
+    {
+      path: '**',
+      component: NotFoundComponent,
+    }],
 }];
 
 @NgModule({

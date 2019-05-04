@@ -10,4 +10,5 @@
 
 export const environment = {
   production: false,
+  goserver: 'http://localhost:8080',
 };

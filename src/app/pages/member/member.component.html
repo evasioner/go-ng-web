@@ -1,0 +1,21 @@
+<nb-card>
+  <nb-card-header>
+    멤버 관리 페이지
+  </nb-card-header>
+
+  <nb-card-body>
+    <button (click)='openWindow(contentTemplate)' nbButton>멤버추가</button>
+    <ng2-smart-table [settings]='settings' [source]='source'>
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+
+
+
+<ng-template #contentTemplate let-data>
+  <label>이름 : </label>
+  <input nbInput type='text' formControlName='name'>
+  <label>아이디 : </label>
+  <input nbInput type='text' formControlName='id'>
+  <button [disabled]="this.memberCreateForm.invalid">확인</button><button>취소</button>
+</ng-template>
